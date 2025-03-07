@@ -1,0 +1,135 @@
+<html ng-app="portfolioApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhay Sheladiya - Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: url("https://picsum.photos/1920/1080") no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+      }
+      .container {
+        max-width: 900px;
+        margin: 50px auto;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .section-title {
+        color: #f8d210;
+        border-bottom: 2px solid #f8d210;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+      }
+      .list-group-item {
+        background: #444;
+        color: white;
+        border: none;
+      }
+      .navbar {
+        background: rgba(0, 0, 0, 0.8) !important;
+      }
+      .page {
+        display: none;
+      }
+      .active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body ng-controller="PortfolioController">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('home')">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('resume')">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="home" class="page active text-center">
+        <h1 class="text-warning">Welcome to Abhay Sheladiya's Portfolio</h1>
+        <p class="lead">A passionate IT student with expertise in Java, Python, and Web Development.</p>
+      </div>
+      <div id="resume" class="page">
+        <h2 class="section-title">Resume</h2>
+        <h3>Education</h3>
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="edu in portfolio.education">{{ edu }}</li>
+        </ul>
+        <h3>Skills</h3>
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="skill in portfolio.skills">{{ skill }}</li>
+        </ul>
+        <h3>Projects</h3>
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="detail in portfolio.project.details">{{ detail }}</li>
+        </ul>
+      </div>
+      <div id="contact" class="page">
+        <h2 class="section-title">Contact</h2>
+        <p><strong>Address:</strong> {{ portfolio.contact.address }}</p>
+        <p><strong>Email:</strong> {{ portfolio.contact.email }}</p>
+        <h3>Hobbies</h3>
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="hobby in portfolio.hobbies">{{ hobby }}</li>
+        </ul>
+        <h3>Languages</h3>
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="lang in portfolio.languages">{{ lang }}</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      angular.module('portfolioApp', []).controller('PortfolioController', function($scope) {
+        $scope.portfolio = {
+          name: "Abhay Sheladiya",
+          description: "Highly motivated IT student with MERN stack, API-testing skills and teamwork abilities.",
+          skills: ["Java", "Python", "MERN stack","HTML", "CSS", "MySQL/Mongodb","API-testing", "Version control", "Problem Solving"],
+          education: [
+            "Diploma in Information Technology, GTU(Gujrat Technological University), Ahmedabad (CGPA: 9.46/10, 2020-2023)",
+            "10th, Shree Saraswati Vidhyalaya, Amreli (68%, 2020)"
+          ],
+          project: {
+            name: "Food Calories Chart",
+            details: [
+              "Food Calories Chart",
+              "Developed a PHP based food website using modern frameworks.",
+              "Implemented user authentication, item catalog management, and order cart functionality.",
+              "Utilized database systems for efficient data storage and retrieval."
+            ]
+          },
+          
+          
+          contact: {
+            address: "Ahmedabad /India",
+            email: "abhaysheladiya.002@gmail.com"
+          },
+          hobbies: ["Reading Books", "Playing games", "Travelling"],
+          languages: ["English", "Hindi", "Gujrati"]
+        };
+      });
+      
+      function showPage(pageId) {
+        document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
