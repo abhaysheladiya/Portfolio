@@ -11,7 +11,7 @@
     <style>
       body {
         font-family: "Poppins", sans-serif;
-        background: url("https://picsum.photos/1920/1080") no-repeat center center fixed;
+        background: url("images/background.jpg") no-repeat center center fixed;
         background-size: cover;
         color: white;
       }
@@ -46,12 +46,30 @@
       .social-links img {
         width: 40px;
         margin: 10px;
+        background-color: rgb(245, 238, 238);
+        padding: 5px;
+        border-radius: 2px;
       }
-      .profile{
+      .profile {
         width: 150px;
         border-radius: 50%;
         display: block;
         margin: 0% auto;
+      }
+      .lead {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #1a1a1a;
+        padding: 20px;
+        border-left: 5px solid #4f5b4f;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        max-width: 700px;
+        margin: 20px auto;
+        line-height: 1.6;
       }
     </style>
   </head>
@@ -59,32 +77,67 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('home')">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('resume')">Resume</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('contact')">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showPage('home')">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showPage('resume')"
+                >Resume</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showPage('contact')"
+                >Contact</a
+              >
+            </li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="container">
       <div id="home" class="page active text-center">
-        <img class="profile" src="linkedin_profile.jpg" alt="profile picture">
+        <img
+          class="profile"
+          src="images/linkedin_profile.jpg"
+          alt="profile picture"
+        />
         <h1 class="text-warning">Welcome to Abhay Sheladiya's Portfolio</h1>
-        <p class="lead">A passionate IT student with expertise in MERN-stack, Python, and Web Development.</p>
+        <p class="lead">
+          "A passionate IT student with hands-on expertise in MERN stack,
+          Python, and modern web development, driven to build innovative and
+          scalable digital solutions."
+        </p>
         <div class="social-links">
           <a href="https://github.com/abhaysheladiya" target="_blank">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" alt="GitHub" />
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"
+              alt="GitHub"
+            />
           </a>
-          <a href="https://www.linkedin.com/in/abhay-sheladiya-330064201/" target="_blank">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="LinkedIn" />
+          <a
+            href="https://www.linkedin.com/in/abhay-sheladiya-330064201/"
+            target="_blank"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"
+              alt="LinkedIn"
+            />
           </a>
           <a href="https://leetcode.com/u/abhaysheladiya/" target="_blank">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/leetcode.svg" alt="LeetCode" />
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/leetcode.svg"
+              alt="LeetCode"
+            />
           </a>
         </div>
       </div>
@@ -92,35 +145,97 @@
         <h2 class="section-title">Resume</h2>
         <h3>Education</h3>
         <ul class="list-group">
-          <li class="list-group-item">Bachelor of Engineering in Information Technology, SAL Engineering and Technical Institute, Ahmedabad (CGPA: 8.74, 2023-2026)</li>
-          <li class="list-group-item">Diploma in Information Technology, Gujarat Technological University (CGPA: 9.46, 2020-2023)</li>
-          <li class="list-group-item">S.S.C., Shree Saraswati Vidyalaya, GSEB (Percentage: 68.5%, 2019-2020)</li>
+          <li class="list-group-item">
+            Bachelor of Engineering in Information Technology, SAL Engineering
+            and Technical Institute, Ahmedabad (CGPA: 8.74, 2023-2026)
+          </li>
+          <li class="list-group-item">
+            Diploma in Information Technology, Gujarat Technological University
+            (CGPA: 9.46, 2020-2023)
+          </li>
+          <li class="list-group-item">
+            S.S.C 10<sup>th</sup> standard, Shree Saraswati Vidyalaya, GSEB
+            (Percentage: 68.5%, 2019-2020)
+          </li>
         </ul>
         <h3>Experience</h3>
         <ul class="list-group">
-          <li class="list-group-item">Full-stack Intern, Infotect Solutions Pvt Ltd (Dec 2024 - Mar 2025) - Developed skills in React by building responsive, dynamic web applications. Designed and implemented reusable components using hooks and API. Managed state efficiently and utilized React Router for navigation. Integrated third-party libraries and APIs to ensure optimal performance. Gained proficiency in modern web development practices, including responsive design and accessibility.</li>
-          <li class="list-group-item">Internshala Student Partner (Aug 2024 - Oct 2024) - Enhanced soft skills, led teams, and improved public speaking through campus engagement and networking.</li>
+          <li class="list-group-item">
+            <strong>Full-stack Intern,</strong> Infotect Solutions Pvt Ltd (Dec
+            2024 - Mar 2025) - <br />
+            Developed skills in React by building responsive, dynamic web
+            applications. Designed and implemented reusable components using
+            hooks and API. Managed state efficiently and utilized React Router
+            for navigation. Integrated third-party libraries and APIs to ensure
+            optimal performance. Gained proficiency in modern web development
+            practices, including responsive design and accessibility.
+          </li>
+          <li class="list-group-item">
+            <strong> Internshala Student Partner</strong> (Aug 2024 - Oct 2024)
+            - <br />
+            Enhanced soft skills, led teams, and improved public speaking
+            through campus engagement and networking.
+          </li>
         </ul>
         <h3>Skills</h3>
         <ul class="list-group">
-          <li class="list-group-item">Java, JavaScript, Python</li>
-          <li class="list-group-item">HTML, CSS, Bootstrap, React.js</li>
-          <li class="list-group-item">Node.js, Express.js</li>
-          <li class="list-group-item">MySQL, MongoDB</li>
-          <li class="list-group-item">Git, GitHub, VS Code</li>
+          <li class="list-group-item">
+            <u>Languages:</u> Java-Script,Python,C++
+          </li>
+          <li class="list-group-item">
+            <u>Front-end:</u> HTML,CSS,Bootstrap,React.js,TailwindCSS, Django
+          </li>
+          <li class="list-group-item"><u>Back-end:</u> NodeJS, Express.JS</li>
+          <li class="list-group-item"><u>Database:</u> MySQL, MongoDB</li>
+          <li class="list-group-item"><u>Tools:</u> Git, GitHub, VS Code</li>
         </ul>
         <h3>Projects</h3>
         <ul class="list-group">
-          <li class="list-group-item">Job-Navigator (MERN Stack) - A job search and posting platform with real-time chat functionality, enabling seamless employer-candidate interactions.</li>
-          <li class="list-group-item">Food Calories Chart (PHP) - A feature-rich platform displaying food calorie information, allowing users to dynamically update and manage their food intake.</li>
+          <li class="list-group-item">
+            Job-Navigator (MERN Stack) - <br />
+            Built web applications using the MERN stack (MongoDB, Express.js,
+            React, Node.js). <br />
+            Integrated real time jobs search and post mechanism by individuals
+            as well as company. <br />
+            Developed a dynamic chat app enabling seamless and instant user
+            interaction
+          </li>
+          <li class="list-group-item">
+            Food Calories Chart (PHP) - <br />
+            Implemented a Food Calories feature using PHP. <br />
+            Developed new feature in which people can view the calories of the
+            food. <br />
+            Enabled real-time updates for adding and removing items from the
+            cart. <br />
+            Created a "View Cart" feature displaying total quantity and price
+            dynamically based on selected items.
+          </li>
+          <li class="list-group-item">
+            Ice-creamShop (Pyhon, Django)- <br />
+            In this project with help of python Django framework I created
+            real-time iceCream Shop. <br />
+            Integrated real time templates for home, about, login/signup,
+            feedback form by implemented TailwindCSS,Html as front-end and
+            Django-Admin for storing the data.
+          </li>
         </ul>
         <h3>Certifications</h3>
         <ul class="list-group">
-          <li class="list-group-item">Smart India Hackathon (SIH) Participant</li>
-          <li class="list-group-item">Python Training Program by BrainlyBeam</li>
+          <li class="list-group-item">
+            Smart India Hackathon (SIH) Participant
+          </li>
+          <li class="list-group-item">
+            Python Training Program by BrainlyBeam
+          </li>
           <li class="list-group-item">Problem Solving - HackerRank</li>
-          <li class="list-group-item">Technical and Programming Fundamentals - Apti-Tech</li>
+          <li class="list-group-item">
+            Technical and Programming Fundamentals - Apti-Tech
+          </li>
         </ul>
+
+        <a href="Resume_portfolio.pdf" download="" class="download-btn"
+          >Download Resume</a
+        >
       </div>
       <div id="contact" class="page">
         <h2 class="section-title">Contact</h2>
@@ -138,6 +253,5 @@
         document.getElementById(pageId).style.display = "block";
       }
     </script>
-    
   </body>
 </html>
